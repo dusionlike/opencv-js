@@ -1,5 +1,5 @@
 {
-  "name": "@techstark/opencv-js",
+  "name": "@dusion/opencv-js",
   "version": "4.10.0-release.1",
   "description": "OpenCV JavaScript version for node.js or browser",
   "main": "dist/opencv.js",
