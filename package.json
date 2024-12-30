@@ -8,8 +8,16 @@
     "dist/",
     "src/"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/opencv.bundle.mjs",
+      "require": "./dist/opencv.bundle.js"
+    }
+  },
   "scripts": {
     "build": "tsc",
+    "build:bundle": "tsup",
     "prepack": "npm run build",
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "jest"
@@ -20,6 +28,7 @@
     "jimp": "^0.22.12",
     "prettier": "^3.3.3",
     "ts-jest": "^29.2.5",
+    "tsup": "^8.3.5",
     "typescript": "^5.5.4"
   },
   "repository": {
