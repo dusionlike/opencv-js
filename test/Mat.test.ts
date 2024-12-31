@@ -1,6 +1,7 @@
 import Jimp from "jimp";
 import path from "path";
 import { setupOpenCv, translateException } from "./cv";
+import cv from "..";
 
 beforeAll(setupOpenCv);
 

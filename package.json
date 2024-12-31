@@ -2,22 +2,15 @@
   "name": "@dusion/opencv-js",
   "version": "4.10.0-release.3",
   "description": "OpenCV JavaScript version for node.js or browser",
-  "main": "dist/opencv.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/src/index.d.ts",
   "files": [
-    "dist/",
-    "src/"
+    "dist",
+    "lib"
   ],
-  "exports": {
-    ".": {
-      "types": "./dist/src/index.d.ts",
-      "import": "./dist/opencv.bundle.mjs",
-      "require": "./dist/opencv.bundle.js"
-    }
-  },
   "scripts": {
-    "build": "tsc",
-    "build:bundle": "tsup",
+    "build": "tsup && tsc",
     "prepack": "npm run build",
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "jest"
@@ -33,17 +26,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TechStark/opencv-js.git"
+    "url": "git+https://github.com/dusion/opencv-js.git"
   },
   "keywords": [
     "opencv",
     "javascript",
-    "computer vision"
+    "computer vision",
+    "wasm"
   ],
-  "author": "Wilson",
+  "author": "dusion",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/TechStark/opencv-js/issues"
+    "url": "https://github.com/dusion/opencv-js/issues"
   },
-  "homepage": "https://github.com/TechStark/opencv-js#readme"
+  "homepage": "https://github.com/dusion/opencv-js#readme"
 }

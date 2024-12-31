@@ -1,7 +1,7 @@
 import path from "path";
 import fs from "fs";
-import * as ts from "typescript";
 import { setupOpenCv } from "./cv";
+import cv from "..";
 
 beforeAll(setupOpenCv);
 

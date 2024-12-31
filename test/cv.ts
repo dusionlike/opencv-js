@@ -1,11 +1,7 @@
-import "../src";
+import cv from "..";
 
 export async function setupOpenCv() {
-  return new Promise((resolve) => {
-    const _cv = require("../dist/opencv");
-    _cv.onRuntimeInitialized = resolve;
-    global.cv = _cv;
-  });
+  await cv.loadOpenCV("lib/opencv_js.wasm")
 }
 
 export function translateException(err: any) {

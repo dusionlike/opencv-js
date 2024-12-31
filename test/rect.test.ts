@@ -1,4 +1,5 @@
 import { setupOpenCv } from "./cv";
+import cv from "..";
 
 beforeAll(setupOpenCv);
 

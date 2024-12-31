@@ -1,14 +1,7 @@
 import { defineConfig } from 'tsup'
-import { extractWasmPlugin } from './plugins/extractWasm'
 
 export default defineConfig({
-  entry: ['src/opencv.ts'],
-  format: ['cjs', 'esm'],
+  entry: ['src/index.ts'],
   outDir: 'dist',
-  outExtension(ctx) {
-    return {
-      js: ctx.format === 'cjs' ? '.bundle.js' : '.bundle.mjs',
-    }
-  },
-  esbuildPlugins: [extractWasmPlugin()]
+  format: ['cjs', 'esm'],
 })
