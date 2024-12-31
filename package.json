@@ -5,6 +5,17 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "node": {
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.js"
+      },
+      "import": "./dist/index.web.mjs",
+      "require": "./dist/index.web.js"
+    }
+  },
   "files": [
     "dist",
     "lib"
