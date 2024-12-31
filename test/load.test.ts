@@ -4,7 +4,9 @@ import { translateException } from "./cv";
 describe("loadOpenCv", () => {
   it("test loadOpenCv by path", async () => {
     try {
-      await cv.loadOpenCV("lib/opencv_js.wasm");
+      cv.loadOpenCV("lib/opencv_js.wasm");
+      await cv.loadPromise;
+      expect(cv).toHaveProperty("Mat");
     } catch (error) {
       throw translateException(error);
     }
@@ -15,6 +17,7 @@ describe("loadOpenCv", () => {
       const fs = require("fs");
       const buffer = fs.readFileSync("lib/opencv_js.wasm");
       await cv.loadOpenCV(buffer);
+      expect(cv).toHaveProperty("Mat");
     } catch (error) {
       throw translateException(error);
     }
